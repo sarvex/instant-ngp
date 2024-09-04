@@ -171,7 +171,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Grab binary artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
       - name: Package
         run: for i in */; do zip -r "${i%/}.zip" "$i"; done
       - name: Update release
